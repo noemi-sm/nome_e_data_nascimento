@@ -1,0 +1,15 @@
+while True:
+  
+  try:
+
+    nome = input("Informe seu nome completo: ")
+    data_nascimento = int(input("Informe sua data de nascimento: "))
+
+    if data_nascimento < 1922 or data_nascimento > 2021:
+      raise Exception("A data de nascimento deve ser entre 1922 e 2021.")
+    else:
+      idade = 2022 - data_nascimento
+      print(f"{nome}, você tem", idade, "anos de idade." )
+      break
+
+  except Exception as erro:
